@@ -1,17 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --background: #faf8f4;
-  --foreground: #17140f;
+  --background: #faf9f5;
+  --foreground: #102a43;
 
-  --color-ink: #17140f;
-  --color-ink-soft: #3a352c;
-  --color-charcoal: #211d17;
-  --color-cream: #faf8f4;
-  --color-cream-soft: #f2ede2;
-  --color-gold: #b6913c;
-  --color-gold-light: #d9bd7a;
-  --color-gold-dark: #8f6f28;
+  /* Deep Royal Navy — headings, nav, buttons */
+  --color-ink: #102a43;
+  /* Navy Grey — body text */
+  --color-ink-soft: #243b53;
+  /* Midnight Navy — darkest panels (footer, CTA) */
+  --color-charcoal: #0b1f36;
+  /* Royal Ivory White — dominant background */
+  --color-cream: #faf9f5;
+  /* Warm White — secondary background */
+  --color-cream-soft: #f5f1e8;
+  /* Champagne Gold — primary accent */
+  --color-gold: #c99a3e;
+  /* Soft Champagne — light gold accent */
+  --color-gold-light: #d9b65d;
+  /* Luxury Gold — borders / dark gold */
+  --color-gold-dark: #b8862d;
 }
 
 @theme inline {
@@ -92,7 +100,7 @@ body {
 }
 
 .gold-gradient-text {
-  background: linear-gradient(90deg, #8f6f28, #d9bd7a 45%, #b6913c 100%);
+  background: linear-gradient(90deg, #b8862d, #d9b65d 45%, #c99a3e 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -100,6 +108,6 @@ body {
 
 .bg-fabric-pattern {
   background-image:
-    radial-gradient(circle at 1px 1px, rgba(182, 145, 60, 0.18) 1px, transparent 0);
+    radial-gradient(circle at 1px 1px, rgba(201, 154, 62, 0.18) 1px, transparent 0);
   background-size: 22px 22px;
 }

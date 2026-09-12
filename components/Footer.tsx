@@ -26,13 +26,15 @@ export default function Footer() {
       <Container className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-cream/10">
         <div className="flex flex-col gap-4 sm:col-span-2 lg:col-span-1">
           <div className="flex items-center gap-3">
-            <Image
-              src="/logo/logo.png"
-              alt={`${business.name} logo`}
-              width={40}
-              height={40}
-              className="h-10 w-10 object-contain"
-            />
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-cream p-1.5">
+              <Image
+                src="/logo/fabric_club_logo_no_text.svg"
+                alt={`${business.name} logo`}
+                width={40}
+                height={40}
+                className="h-full w-full object-contain"
+              />
+            </span>
             <span className="font-display text-lg text-cream">The Fabric Club</span>
           </div>
           <p className="text-sm leading-relaxed text-cream/60 max-w-xs">

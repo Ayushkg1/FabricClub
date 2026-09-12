@@ -48,27 +48,21 @@ export default function Header() {
   return (
     <>
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrolled
-          ? "bg-cream/90 backdrop-blur-md shadow-[0_4px_24px_-8px_rgba(23,20,15,0.15)]"
-          : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-40 bg-cream/90 backdrop-blur-md transition-shadow duration-300 ${
+        scrolled ? "shadow-[0_4px_24px_-8px_rgba(16,42,67,0.15)]" : "shadow-none"
       }`}
     >
       <Container className="flex items-center justify-between py-3">
         <Link href="#home" className="flex items-center gap-3 shrink-0">
           <Image
-            src="/logo/logo.png"
+            src="/logo/fabric_club_logo_no_text.svg"
             alt={`${business.name} logo`}
             width={44}
             height={44}
             className="h-10 w-10 sm:h-11 sm:w-11 object-contain"
             priority
           />
-          <span
-            className={`font-display text-lg sm:text-xl leading-tight transition-colors duration-300 ${
-              scrolled ? "text-ink" : "text-cream"
-            }`}
-          >
+          <span className="font-display text-lg sm:text-xl leading-tight text-ink">
             The Fabric Club
           </span>
         </Link>
@@ -78,11 +72,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors ${
-                scrolled
-                  ? "text-ink-soft hover:text-gold-dark"
-                  : "text-cream/80 hover:text-gold-light"
-              }`}
+              className="text-sm font-medium text-ink-soft hover:text-gold-dark transition-colors"
             >
               {link.label}
             </a>
@@ -92,7 +82,7 @@ export default function Header() {
         <div className="hidden lg:flex items-center gap-3">
           <Button
             href={telHref()}
-            variant={scrolled ? "ghost" : "outline-light"}
+            variant="ghost"
             size="md"
             icon={<Icon name="phone" filled className="h-4 w-4" />}
           >
@@ -109,11 +99,7 @@ export default function Header() {
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
           className={`lg:hidden relative z-[70] flex h-10 w-10 items-center justify-center rounded-full border transition-colors duration-300 ${
-            open
-              ? "border-cream/25 text-cream bg-ink"
-              : scrolled
-                ? "border-ink/10 text-ink"
-                : "border-cream/25 text-cream"
+            open ? "border-cream/25 text-cream bg-ink" : "border-ink/10 text-ink"
           }`}
         >
           <Icon name={open ? "close" : "menu"} className="h-5 w-5" />
@@ -143,7 +129,7 @@ export default function Header() {
 
           <div className="relative flex items-center gap-3 px-6 pt-7 pb-5 border-b border-cream/10">
             <Image
-              src="/logo/logo.png"
+              src="/logo/fabric_club_logo_no_text.svg"
               alt={`${business.name} logo`}
               width={38}
               height={38}

@@ -15,14 +15,14 @@ export default function About() {
     <section id="about" className="py-20 sm:py-28 bg-cream-soft">
       <Container className="grid lg:grid-cols-2 gap-14 items-center">
         <Reveal className="relative mx-auto lg:mx-0 w-full max-w-md">
-          <div className="relative aspect-square w-full rounded-[2rem] bg-gradient-to-br from-ink via-charcoal to-ink flex items-center justify-center p-10 overflow-hidden">
-            <div className="absolute inset-0 bg-fabric-pattern opacity-20" aria-hidden />
+          <div className="relative aspect-square w-full rounded-[2rem] border border-gold/25 bg-gradient-to-br from-white via-cream-soft to-white flex items-center justify-center p-10 overflow-hidden shadow-[0_30px_70px_-30px_rgba(16,42,67,0.25)]">
+            <div className="absolute inset-0 bg-fabric-pattern opacity-40" aria-hidden />
             <Image
-              src="/logo/logo.png"
+              src="/logo/newlogo.png"
               alt={`${business.name} logo`}
-              width={200}
-              height={200}
-              className="relative w-32 sm:w-40 h-auto object-contain"
+              width={1641}
+              height={959}
+              className="relative w-full max-w-[220px] h-auto object-contain"
             />
           </div>
         </Reveal>

@@ -23,7 +23,7 @@ type ButtonAsButton = BaseProps & {
 
 const variants = {
   primary:
-    "bg-gold text-ink hover:bg-gold-dark hover:text-cream shadow-[0_8px_24px_-8px_rgba(182,145,60,0.55)]",
+    "bg-gold text-ink hover:bg-gold-dark hover:text-cream shadow-[0_8px_24px_-8px_rgba(201,154,62,0.55)]",
   secondary:
     "bg-ink text-cream hover:bg-charcoal",
   ghost:

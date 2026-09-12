@@ -44,7 +44,7 @@ export const metadata: Metadata = {
       "Professional dry cleaning, laundry and garment care with convenient doorstep pickup and delivery.",
     url: siteUrl,
     siteName: business.name,
-    images: ["/logo/logo.png"],
+    images: ["/logo/newlogo.png"],
     locale: "en_IN",
     type: "website",
   },
@@ -53,14 +53,14 @@ export const metadata: Metadata = {
     title: `${business.name} — Premium Care for Every Fabric`,
     description:
       "Professional dry cleaning, laundry and garment care with convenient doorstep pickup and delivery.",
-    images: ["/logo/logo.png"],
+    images: ["/logo/newlogo.png"],
   },
   alternates: {
     canonical: siteUrl,
   },
   icons: {
-    icon: "/logo/logo.png",
-    apple: "/logo/logo.png",
+    icon: "/logo/fabric_club_logo_no_text.svg",
+    apple: "/logo/fabric_club_logo_no_text.svg",
   },
 };
 
@@ -68,7 +68,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: business.name,
-  image: `${siteUrl}/logo/logo.png`,
+  image: `${siteUrl}/logo/newlogo.png`,
   telephone: business.phone,
   email: business.email,
   address: {
