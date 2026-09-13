@@ -3,6 +3,7 @@ import Button from "./ui/Button";
 import Icon from "./ui/Icon";
 import Reveal from "./ui/Reveal";
 import Carousel from "./ui/Carousel";
+import QuickBookingForm from "./QuickBookingForm";
 import { business } from "@/lib/contact";
 
 const TRUST_POINTS = [
@@ -34,17 +35,22 @@ export default function Hero() {
       />
 
       <Container className="relative grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+        <Reveal className="order-0 lg:hidden inline-flex w-fit items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-gold-dark">
+          <Icon name="truck" className="h-3.5 w-3.5" />
+          Free Pick Up &amp; Delivery
+        </Reveal>
+
         <div className="order-2 lg:order-1 flex flex-col gap-7">
           <Reveal delay={80}>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.1] text-ink text-balance">
               Dry Cleaning &amp; Laundry{" "}
-              <span className="gold-gradient-text">Before 24 Hours</span>
+              {/* <span className="gold-gradient-text">Before 24 Hours</span> */}
             </h1>
           </Reveal>
 
           <Reveal className="inline-flex w-fit items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-gold-dark">
             <Icon name="sparkle" filled className="h-3.5 w-3.5" />
-            Express Service Available
+            Express Service Available Before 24 Hours
           </Reveal>
 
           <Reveal delay={160}>
@@ -100,6 +106,12 @@ export default function Hero() {
             </div>
           </div>
         </Reveal>
+
+        <div id="booking" className="order-3 lg:col-span-2 max-w-xl scroll-mt-28 lg:mx-auto lg:w-full">
+          <Reveal delay={340}>
+            <QuickBookingForm />
+          </Reveal>
+        </div>
       </Container>
     </section>
   );

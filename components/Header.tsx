@@ -62,7 +62,7 @@ export default function Header() {
             className="h-9 w-auto sm:h-10 object-contain"
             priority
           />
-          <span className="font-display text-lg sm:text-xl leading-tight text-ink">
+          <span className="font-display font-bold text-lg sm:text-xl leading-tight text-ink">
             The Fabric Club
           </span>
         </Link>

@@ -8,7 +8,6 @@ import GarmentCareProcess from "@/components/GarmentCareProcess";
 import SpecialCare from "@/components/SpecialCare";
 import Offers from "@/components/Offers";
 import Pricing from "@/components/Pricing";
-import Booking from "@/components/Booking";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
 import Locations from "@/components/Locations";
 import Testimonials from "@/components/Testimonials";
@@ -30,7 +29,6 @@ export default function Home() {
       <SpecialCare />
       <Offers />
       <Pricing />
-      <Booking />
       <WhatsAppCTA message="Send your pickup request on WhatsApp — we'll take it from there." />
       <Locations />
       <Testimonials />
