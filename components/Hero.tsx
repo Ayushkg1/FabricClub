@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Container from "./ui/Container";
 import Button from "./ui/Button";
 import Icon from "./ui/Icon";
 import Reveal from "./ui/Reveal";
+import Carousel from "./ui/Carousel";
 import { business } from "@/lib/contact";
 
 const TRUST_POINTS = [
@@ -10,6 +10,14 @@ const TRUST_POINTS = [
   "Doorstep Pickup & Delivery",
   "Fabric-Safe Processes",
   "On-Time Delivery",
+];
+
+const HERO_SLIDES = [
+  { src: "/images/Pick&Drop.jpeg", alt: "Doorstep pickup and delivery by Fabric Club" },
+  { src: "/images/HassleFreePayment.jpeg", alt: "Schedule a pickup in a few taps" },
+  { src: "/images/BeforeAfter.jpeg", alt: "Before and after — the Fabric Club difference" },
+  { src: "/images/Shoes.jpeg", alt: "Premium shoe, carpet and rug care" },
+  { src: "/images/FabricCare.jpeg", alt: "Careful, fabric-safe cleaning processes" },
 ];
 
 export default function Hero() {
@@ -25,18 +33,18 @@ export default function Hero() {
         aria-hidden
       />
 
-      <Container className="relative grid lg:grid-cols-2 gap-14 items-center">
-        <div className="flex flex-col gap-7">
-          <Reveal className="inline-flex w-fit items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-gold-dark">
-            <Icon name="sparkle" filled className="h-3.5 w-3.5" />
-            Express Service Available
-          </Reveal>
-
+      <Container className="relative grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+        <div className="order-2 lg:order-1 flex flex-col gap-7">
           <Reveal delay={80}>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.1] text-ink text-balance">
               Dry Cleaning &amp; Laundry{" "}
               <span className="gold-gradient-text">Before 24 Hours</span>
             </h1>
+          </Reveal>
+
+          <Reveal className="inline-flex w-fit items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-gold-dark">
+            <Icon name="sparkle" filled className="h-3.5 w-3.5" />
+            Express Service Available
           </Reveal>
 
           <Reveal delay={160}>
@@ -74,36 +82,15 @@ export default function Hero() {
           </Reveal>
         </div>
 
-        <Reveal delay={200} className="relative mx-auto w-full max-w-md lg:max-w-none">
-          <div className="relative aspect-[4/5] w-full rounded-[2rem] border border-gold/25 bg-gradient-to-br from-white via-cream-soft to-white p-8 shadow-[0_40px_80px_-30px_rgba(16,42,67,0.25)]">
-            <div className="flex h-full flex-col items-center justify-center gap-8">
-              <Image
-                src="/logo/newlogo.png"
-                alt={`${business.name} — luxury care for every fabric`}
-                width={1641}
-                height={959}
-                className="w-full max-w-[260px] h-auto object-contain drop-shadow-[0_10px_30px_rgba(201,154,62,0.3)]"
-                priority
-              />
-              <div className="grid grid-cols-2 gap-3 w-full">
-                {[
-                  { icon: "hanger", label: "Dry Cleaning" },
-                  { icon: "washer", label: "Laundry" },
-                  { icon: "iron", label: "Steam Iron" },
-                  { icon: "sofa", label: "Sofa & Carpet" },
-                ].map((item) => (
-                  <div
-                    key={item.label}
-                    className="flex items-center gap-2.5 rounded-2xl border border-ink/8 bg-white/70 px-3.5 py-3 text-ink"
-                  >
-                    <Icon name={item.icon as never} className="h-5 w-5 text-gold-dark shrink-0" />
-                    <span className="text-xs sm:text-sm font-medium">{item.label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="absolute -bottom-6 -left-6 hidden sm:flex items-center gap-3 rounded-2xl bg-ink px-5 py-4 shadow-xl">
+        <Reveal
+          delay={120}
+          className="order-1 lg:order-2 relative w-full -mx-5 sm:-mx-8 lg:mx-0 lg:max-w-none"
+        >
+          <Carousel
+            slides={HERO_SLIDES}
+            className="aspect-[1264/843] w-full rounded-none lg:rounded-[2rem] lg:border lg:border-gold/25 lg:shadow-[0_40px_80px_-30px_rgba(93,24,57,0.25)]"
+          />
+          <div className="absolute -bottom-6 -left-6 hidden lg:flex items-center gap-3 rounded-2xl bg-ink px-5 py-4 shadow-xl">
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/20 text-gold-light">
               <Icon name="truck" className="h-5 w-5" />
             </span>

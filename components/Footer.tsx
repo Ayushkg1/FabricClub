@@ -25,14 +25,14 @@ export default function Footer() {
     <footer id="contact" className="bg-ink pt-16 pb-28 sm:pb-16 text-cream/80">
       <Container className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-cream/10">
         <div className="flex flex-col gap-4 sm:col-span-2 lg:col-span-1">
-          <div className="flex items-center gap-3">
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-cream p-1.5">
+          <div className="flex items-center gap-2.5">
+            <span className="flex h-10 shrink-0 items-center justify-center rounded-lg bg-cream/90 px-2 py-1.5">
               <Image
-                src="/logo/fabric_club_logo_no_text.svg"
+                src="/images/LogoWithoutBG.png"
                 alt={`${business.name} logo`}
-                width={40}
-                height={40}
-                className="h-full w-full object-contain"
+                width={64}
+                height={35}
+                className="h-full w-auto object-contain"
               />
             </span>
             <span className="font-display text-lg text-cream">The Fabric Club</span>

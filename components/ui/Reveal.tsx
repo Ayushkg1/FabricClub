@@ -35,7 +35,7 @@ export default function Reveal({
   return (
     <div
       ref={ref}
-      className={`reveal ${visible ? "is-visible" : ""} ${className}`}
+      className={`mx-auto reveal ${visible ? "is-visible" : ""} ${className}`}
       style={{ animationDelay: visible ? `${delay}ms` : undefined }}
     >
       {children}

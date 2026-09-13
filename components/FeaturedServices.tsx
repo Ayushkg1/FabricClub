@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "./ui/Container";
 import SectionHeading from "./ui/SectionHeading";
 import Reveal from "./ui/Reveal";
@@ -23,12 +24,14 @@ export default function FeaturedServices() {
                 i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
               }`}
             >
-              <div className="relative aspect-[16/11] w-full rounded-3xl bg-gradient-to-br from-ink via-charcoal to-ink p-8 flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-fabric-pattern opacity-20" aria-hidden />
-                <div className="absolute -top-10 -right-10 h-52 w-52 rounded-full bg-gold/15 blur-3xl" aria-hidden />
-                <span className="relative flex h-28 w-28 sm:h-32 sm:w-32 items-center justify-center rounded-full border border-gold/25 bg-gold/10 text-gold-light">
-                  <Icon name="sparkles" className="h-12 w-12" />
-                </span>
+              <div className="relative aspect-[16/11] w-full rounded-3xl overflow-hidden border border-gold/20 shadow-[0_30px_60px_-24px_rgba(93,24,57,0.3)]">
+                <Image
+                  src={service.image}
+                  alt={service.headline}
+                  fill
+                  sizes="(min-width: 1024px) 40rem, 100vw"
+                  className="object-cover"
+                />
               </div>
 
               <div className="flex flex-col gap-5">

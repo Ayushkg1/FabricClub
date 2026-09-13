@@ -43,10 +43,22 @@ export const services: Service[] = [
     icon: "curtain",
   },
   {
-    slug: "sofa-upholstery",
-    name: "Sofa / Upholstery Cleaning",
+    slug: "sofa-cleaning",
+    name: "Sofa Cleaning",
     description: "Deep upholstery cleaning that refreshes sofas without harming delicate covers.",
     icon: "sofa",
+  },
+  {
+    slug: "leather-products",
+    name: "Leather Products",
+    description: "Specialised cleaning and conditioning for leather jackets, bags and accessories.",
+    icon: "sparkle",
+  },
+  {
+    slug: "premium-laundry",
+    name: "Premium Laundry",
+    description: "Elevated laundry care with extra attention to detail for your finest everyday wear.",
+    icon: "washer",
   },
   {
     slug: "premium-garment-care",
@@ -62,12 +74,14 @@ export type FeaturedService = {
   headline: string;
   description: string;
   benefits: string[];
+  image: string;
 };
 
 export const featuredServices: FeaturedService[] = [
   {
     slug: "dry-cleaning",
     name: "Dry Cleaning",
+    image: "/images/DryClean.png",
     headline: "Give your favourite clothes the professional care they deserve.",
     description:
       "From formal suits to occasion wear, our dry cleaning process is built around fabric safety — the right solvent, the right temperature and a finish that looks tailored, not just clean.",
@@ -80,6 +94,7 @@ export const featuredServices: FeaturedService[] = [
   {
     slug: "laundry",
     name: "Laundry",
+    image: "/images/Laundry.png",
     headline: "Everyday wear, cleaned the professional way.",
     description:
       "Shirts, casuals and daily essentials are sorted, washed and finished with attention to fabric type — so colours, fit and texture are protected wash after wash.",
@@ -92,6 +107,7 @@ export const featuredServices: FeaturedService[] = [
   {
     slug: "steam-ironing",
     name: "Steam Ironing",
+    image: "/images/SteamIron.png",
     headline: "A crisp, professional finish without the effort.",
     description:
       "Our steam ironing service brings a tailored, wrinkle-free finish to shirts, trousers and formal wear — ready to wear the moment they arrive.",
@@ -104,6 +120,7 @@ export const featuredServices: FeaturedService[] = [
   {
     slug: "premium-garment-care",
     name: "Premium Garment Care",
+    image: "/images/GarmentCare.png",
     headline: "Because your finest pieces deserve specialised attention.",
     description:
       "Sarees, sherwanis, suits and designer wear are inspected and treated individually, with the finishing methods each fabric actually needs.",

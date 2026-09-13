@@ -29,6 +29,6 @@ export const testimonials: Testimonial[] = [
     name: "Sameer T.",
     rating: 5,
     review: "Got my sofa cleaned at home — quick, tidy and the results were noticeably better than I expected.",
-    service: "Sofa / Upholstery Cleaning",
+    service: "Sofa Cleaning",
   },
 ];

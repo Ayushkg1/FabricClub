@@ -9,9 +9,19 @@ export default function FloatingContactButtons() {
       {/* Desktop / tablet: floating stack, bottom-right */}
       <div className="hidden sm:flex fixed bottom-6 right-6 z-50 flex-col gap-3">
         <a
+          href={telHref(business.supportPhone)}
+          aria-label={`Customer support — call ${business.supportPhoneDisplay}`}
+          className="group flex items-center gap-2.5 rounded-full bg-gold text-ink pl-4 pr-5 py-3 shadow-[0_10px_30px_-8px_rgba(185,154,82,0.55)] transition-all duration-300 hover:bg-gold-dark hover:-translate-y-0.5 hover:shadow-[0_14px_34px_-8px_rgba(185,154,82,0.65)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+        >
+          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-ink text-gold-light transition-transform duration-300 group-hover:scale-110">
+            <Icon name="headset" className="h-4 w-4" />
+          </span>
+          <span className="text-sm font-semibold tracking-wide">Support</span>
+        </a>
+        <a
           href={telHref()}
           aria-label={`Call ${business.name} now`}
-          className="group flex items-center gap-2.5 rounded-full bg-ink text-cream pl-4 pr-5 py-3 shadow-[0_10px_30px_-8px_rgba(16,42,67,0.5)] transition-all duration-300 hover:bg-charcoal hover:-translate-y-0.5 hover:shadow-[0_14px_34px_-8px_rgba(16,42,67,0.6)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+          className="group flex items-center gap-2.5 rounded-full bg-ink text-cream pl-4 pr-5 py-3 shadow-[0_10px_30px_-8px_rgba(93,24,57,0.5)] transition-all duration-300 hover:bg-charcoal hover:-translate-y-0.5 hover:shadow-[0_14px_34px_-8px_rgba(93,24,57,0.6)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
         >
           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gold text-ink transition-transform duration-300 group-hover:scale-110">
             <Icon name="phone" filled className="h-4 w-4" />
@@ -32,9 +42,18 @@ export default function FloatingContactButtons() {
         </a>
       </div>
 
+      {/* Mobile: floating customer-support button, sits just above the bottom bar */}
+      <a
+        href={telHref(business.supportPhone)}
+        aria-label={`Customer support — call ${business.supportPhoneDisplay}`}
+        className="sm:hidden fixed right-4 bottom-[calc(4.75rem+env(safe-area-inset-bottom))] z-50 flex h-13 w-13 items-center justify-center rounded-full bg-gold text-ink shadow-[0_10px_28px_-8px_rgba(185,154,82,0.6)] active:scale-95 transition-transform"
+      >
+        <Icon name="headset" className="h-5.5 w-5.5" />
+      </a>
+
       {/* Mobile: fixed bottom bar */}
       <div
-        className="sm:hidden fixed bottom-0 left-0 right-0 z-50 grid grid-cols-2 border-t border-ink/10 bg-cream/95 backdrop-blur-md shadow-[0_-6px_24px_-6px_rgba(16,42,67,0.15)]"
+        className="sm:hidden fixed bottom-0 left-0 right-0 z-50 grid grid-cols-2 border-t border-ink/10 bg-cream/95 backdrop-blur-md shadow-[0_-6px_24px_-6px_rgba(93,24,57,0.15)]"
         style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
       >
         <a

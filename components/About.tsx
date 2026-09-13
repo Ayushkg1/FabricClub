@@ -15,15 +15,23 @@ export default function About() {
     <section id="about" className="py-20 sm:py-28 bg-cream-soft">
       <Container className="grid lg:grid-cols-2 gap-14 items-center">
         <Reveal className="relative mx-auto lg:mx-0 w-full max-w-md">
-          <div className="relative aspect-square w-full rounded-[2rem] border border-gold/25 bg-gradient-to-br from-white via-cream-soft to-white flex items-center justify-center p-10 overflow-hidden shadow-[0_30px_70px_-30px_rgba(16,42,67,0.25)]">
-            <div className="absolute inset-0 bg-fabric-pattern opacity-40" aria-hidden />
+          <div className="relative aspect-square w-full rounded-[2rem] border border-gold/25 overflow-hidden shadow-[0_30px_70px_-30px_rgba(93,24,57,0.25)]">
             <Image
-              src="/logo/newlogo.png"
-              alt={`${business.name} logo`}
-              width={1641}
-              height={959}
-              className="relative w-full max-w-[220px] h-auto object-contain"
+              src="/images/FabricCare.jpeg"
+              alt={`Premium fabric care at ${business.name}`}
+              fill
+              sizes="(min-width: 1024px) 28rem, 90vw"
+              className="object-cover"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent" aria-hidden />
+            <div className="absolute bottom-5 left-5 right-5 flex items-center gap-3 rounded-2xl bg-cream/95 backdrop-blur px-4 py-3 shadow-lg">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gold/15 text-gold-dark">
+                <Icon name="sparkle" filled className="h-4.5 w-4.5" />
+              </span>
+              <span className="font-display text-sm text-ink leading-snug">
+                {business.tagline}
+              </span>
+            </div>
           </div>
         </Reveal>
 

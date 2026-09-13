@@ -49,17 +49,17 @@ export default function Header() {
     <>
     <header
       className={`fixed top-0 left-0 right-0 z-40 bg-cream/90 backdrop-blur-md transition-shadow duration-300 ${
-        scrolled ? "shadow-[0_4px_24px_-8px_rgba(16,42,67,0.15)]" : "shadow-none"
+        scrolled ? "shadow-[0_4px_24px_-8px_rgba(93,24,57,0.15)]" : "shadow-none"
       }`}
     >
       <Container className="flex items-center justify-between py-3">
-        <Link href="#home" className="flex items-center gap-3 shrink-0">
+        <Link href="#home" className="flex items-center gap-2.5 shrink-0">
           <Image
-            src="/logo/fabric_club_logo_no_text.svg"
+            src="/images/LogoWithoutBG.png"
             alt={`${business.name} logo`}
-            width={44}
-            height={44}
-            className="h-10 w-10 sm:h-11 sm:w-11 object-contain"
+            width={64}
+            height={35}
+            className="h-9 w-auto sm:h-10 object-contain"
             priority
           />
           <span className="font-display text-lg sm:text-xl leading-tight text-ink">
@@ -129,11 +129,11 @@ export default function Header() {
 
           <div className="relative flex items-center gap-3 px-6 pt-7 pb-5 border-b border-cream/10">
             <Image
-              src="/logo/fabric_club_logo_no_text.svg"
+              src="/images/LogoWithoutBG.png"
               alt={`${business.name} logo`}
-              width={38}
-              height={38}
-              className="h-9 w-9 object-contain rounded-full bg-cream p-1"
+              width={64}
+              height={35}
+              className="h-8 w-auto object-contain rounded-lg bg-cream/90 px-1.5 py-1"
             />
             <span className="font-display text-lg text-cream">The Fabric Club</span>
           </div>

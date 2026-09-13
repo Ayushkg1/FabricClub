@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --background: #faf9f5;
-  --foreground: #102a43;
+  --background: #f8f5f0;
+  --foreground: #5d1839;
 
-  /* Deep Royal Navy — headings, nav, buttons */
-  --color-ink: #102a43;
-  /* Navy Grey — body text */
-  --color-ink-soft: #243b53;
-  /* Midnight Navy — darkest panels (footer, CTA) */
-  --color-charcoal: #0b1f36;
-  /* Royal Ivory White — dominant background */
-  --color-cream: #faf9f5;
-  /* Warm White — secondary background */
-  --color-cream-soft: #f5f1e8;
-  /* Champagne Gold — primary accent */
-  --color-gold: #c99a3e;
-  /* Soft Champagne — light gold accent */
-  --color-gold-light: #d9b65d;
-  /* Luxury Gold — borders / dark gold */
-  --color-gold-dark: #b8862d;
+  /* Deep Maroon / Burgundy — script text, headings, buttons */
+  --color-ink: #5d1839;
+  /* Dark Slate Grey — body text */
+  --color-ink-soft: #333333;
+  /* Darkest maroon — footer, CTA, mobile menu panels */
+  --color-charcoal: #3a0f24;
+  /* Off-White / Cream — dominant background */
+  --color-cream: #f8f5f0;
+  /* Warm Cream — secondary background */
+  --color-cream-soft: #f0e9dd;
+  /* Metallic Gold — primary accent */
+  --color-gold: #b99a52;
+  /* Soft Gold — light gold accent */
+  --color-gold-light: #cdb578;
+  /* Deep Gold — borders / dark gold */
+  --color-gold-dark: #9c7d3d;
 }
 
 @theme inline {
@@ -100,7 +100,7 @@ body {
 }
 
 .gold-gradient-text {
-  background: linear-gradient(90deg, #b8862d, #d9b65d 45%, #c99a3e 100%);
+  background: linear-gradient(90deg, #9c7d3d, #cdb578 45%, #b99a52 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

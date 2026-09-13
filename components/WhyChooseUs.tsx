@@ -17,7 +17,7 @@ export default function WhyChooseUs() {
             <Reveal
               key={item.title}
               delay={i * 60}
-              className="flex flex-col gap-4 rounded-2xl border border-ink/8 bg-white p-6 transition-colors duration-300 hover:border-gold/40 hover:shadow-[0_16px_40px_-20px_rgba(16,42,67,0.2)]"
+              className="flex flex-col gap-4 rounded-2xl border border-ink/8 bg-white p-6 transition-colors duration-300 hover:border-gold/40 hover:shadow-[0_16px_40px_-20px_rgba(93,24,57,0.2)]"
             >
               <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/12 text-gold-dark">
                 <Icon name={item.icon as never} className="h-6 w-6" />

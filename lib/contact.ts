@@ -4,9 +4,11 @@ export const business = {
   name: "Fabric Club",
   legalName: "The Fabric Club Dry Cleaning",
   tagline: "Premium Care for Every Fabric",
-  phone: "+91 90000 00000",
-  phoneDisplay: "+91 90000 00000",
-  whatsapp: "919000000000", // digits only, country code first, no + or spaces
+  phone: "+91 93549 02020",
+  phoneDisplay: "+91 93549 02020",
+  whatsapp: "919354902020", // digits only, country code first, no + or spaces
+  supportPhone: "+91 99770 06070",
+  supportPhoneDisplay: "+91 99770 06070",
   email: "care@fabricclub.in",
   address: "Civil Lines, Bareilly, Uttar Pradesh, India",
   hours: [
@@ -25,8 +27,8 @@ export const CONTACT = {
   whatsapp: business.whatsapp,
 };
 
-export function telHref() {
-  return `tel:${business.phone.replace(/[^\d+]/g, "")}`;
+export function telHref(phone: string = business.phone) {
+  return `tel:${phone.replace(/[^\d+]/g, "")}`;
 }
 
 export function whatsappHref(message?: string) {
