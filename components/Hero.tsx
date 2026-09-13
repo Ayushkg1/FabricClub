@@ -23,7 +23,7 @@ const HERO_SLIDES = [
 
 export default function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden bg-cream pt-32 pb-20 sm:pt-40 sm:pb-28">
+    <section id="home" className="relative overflow-hidden bg-cream pt-20 pb-20 sm:pt-24 sm:pb-28 lg:pt-40">
       <div className="absolute inset-0 bg-fabric-pattern opacity-60" aria-hidden />
       <div
         className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-gold/15 blur-3xl"
