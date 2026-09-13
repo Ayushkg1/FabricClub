@@ -35,9 +35,13 @@ export default function Hero() {
       />
 
       <Container className="relative grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-        <Reveal className="order-0 lg:hidden inline-flex w-fit items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-gold-dark">
-          <Icon name="truck" className="h-3.5 w-3.5" />
-          Free Pick Up &amp; Delivery
+        <Reveal className="order-1 lg:hidden inline-flex w-fit items-center gap-2.5 rounded-full bg-ink px-4 py-2 shadow-md shadow-ink/20">
+          <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold/20 text-gold-light">
+            <Icon name="truck" className="h-3.5 w-3.5" />
+          </span>
+          <span className="text-xs font-semibold uppercase tracking-[0.15em] text-cream">
+            Free Pick Up &amp; Delivery
+          </span>
         </Reveal>
 
         <div className="order-2 lg:order-1 flex flex-col gap-7">
@@ -90,7 +94,7 @@ export default function Hero() {
 
         <Reveal
           delay={120}
-          className="order-1 lg:order-2 relative w-full -mx-5 sm:-mx-8 lg:mx-0 lg:max-w-none"
+          className="order-0 lg:order-2 relative !-mx-5 sm:!-mx-8 lg:!mx-0 lg:max-w-none lg:w-full"
         >
           <Carousel
             slides={HERO_SLIDES}
